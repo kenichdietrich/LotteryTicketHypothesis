@@ -12,7 +12,7 @@ The LTH API consists of three base classes. Each of them must be fed with a Kera
 
 These classes follow a hierarchy. LotteryModel constitutes the low-level class which is used by LotterySession in each experiment contained in the session and, in turn, LotteryRobust use a session to conduct the trials of the robust experiment.
 
-![hierarchy ticket](/img_md/lotteryticket.pdf)
+![hierarchy ticket](/img_md/lotteryticket.pdf =250x)
 
 Multiple pruning and reinitialisation methods are implemented, many of them inspired by those used in [2]. We are able to prune weights using the following criteria:
 
