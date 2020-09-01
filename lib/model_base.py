@@ -418,7 +418,7 @@ class LotteryModel():
             ax.plot(0.9*np.array([lim1,lim2]), 0.9*np.array([lim1,lim2]), 
                     c="k", alpha=0.2, ls="--", lw = 1, dashes=[5,4])
 
-            ax.set_title("Non-pruned weights in layer {}\n{}: {} weights in total".format(layer, 
+            ax.set_title("Unpruned weights in layer {}\n{}: {} weights in total".format(layer, 
                             os.path.split(self.network.variables[layer*3].name)[0],
                             mask.size), 
                          size=14, fontweight="bold")
