@@ -3,7 +3,7 @@ import tensorflow as tf
 
 import matplotlib.pyplot as plt
 
-import pruning
+from . import pruning
 
 from typing import Tuple, List
 import pickle
