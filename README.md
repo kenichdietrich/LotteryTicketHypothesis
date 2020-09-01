@@ -16,11 +16,11 @@ These classes follow a hierarchy. LotteryModel constitutes the low-level class w
 
 Multiple pruning and reinitialisation methods are implemented, many of them inspired by those used in [2]. We are able to prune weights using the following criteria:
 
-* *Large final* [<img src="https://render.githubusercontent.com/render/math?math=\left|w_{f}\right|">]: Common pruning criterion used in LTH, as for instance in [1]. It keeps weights that have large magnitude after training.
-* *Large init, large final* [<img src="https://render.githubusercontent.com/render/math?math=\text{min}(\alpha\mid w_f\mid,\mid w_i\mid)">]: This criterion tends to select weights that are large both before and after training. 
-* *Magnitude increase* [<img src="https://render.githubusercontent.com/render/math?math=\mid w_f\mid-\mid w_i\mid">]: A criterion which selects the weights that most increase their magnitude with training.
-* *Movement* [<img src="https://render.githubusercontent.com/render/math?math=\left|w_f-w_i\right|">]: The weights that are furthest away from their initial values are kept using this criterion.
-* *Large final, same sign* [<img src="https://render.githubusercontent.com/render/math?math=\text{max}(0,w_f w_i/|w_i|)">]: According to [2], the sign of the weights plays an important role in the LTH, so the large final criterion is also implemented taking into account the conservation of sign.
+* <img src="https://render.githubusercontent.com/render/math?math=\mid w_{f}\mid"> *Large final*: Common pruning criterion used in LTH, as for instance in [1]. It keeps weights that have large magnitude after training.
+* <img src="https://render.githubusercontent.com/render/math?math=\text{min}(\alpha\mid w_f\mid,\mid w_i\mid)"> *Large init, large final*: This criterion tends to select weights that are large both before and after training. 
+* <img src="https://render.githubusercontent.com/render/math?math=\mid w_f\mid-\mid w_i\mid"> *Magnitude increase*: A criterion which selects the weights that most increase their magnitude with training.
+* <img src="https://render.githubusercontent.com/render/math?math=\mid w_f-w_i\mid"> *Movement*: The weights that are furthest away from their initial values are kept using this criterion.
+* <img src="https://render.githubusercontent.com/render/math?math=\text{max}(0,w_f w_i/|w_i|)"> *Large final, same sign*: According to [2], the sign of the weights plays an important role in the LTH, so the large final criterion is also implemented taking into account the conservation of sign.
 
 On the other hand, the reinitialisation is also an important step in the LTH, so several modes are implemented to reinitialise weights after pruning:
 
